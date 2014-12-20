@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7591BEEF-0384-4CB8-8DAC-7AFD049AE9FB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>facklift</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B26FCAE149A9843BB1EBA677DB1BD666A9A274AB</key>
+		<string>https://github.com/pony001/facelift.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>facklift/facklift.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B26FCAE149A9843BB1EBA677DB1BD666A9A274AB</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/pony001/facelift.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B26FCAE149A9843BB1EBA677DB1BD666A9A274AB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B26FCAE149A9843BB1EBA677DB1BD666A9A274AB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>facelift</string>
+		</dict>
+	</array>
+</dict>
+</plist>
