@@ -91,7 +91,7 @@
         
         //[cell initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifierStats];
         //[tableView registerClass:[PlasticCell class] forCellReuseIdentifier:CellIdentifierStats];
-        
+         [tableView registerNib:[UINib nibWithNibName:@"PlasticCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:CellIdentifierStats];
     }
     [cell initWithPlasticInfo:[_plasticList objectAtIndex:indexPath.row]];
     
