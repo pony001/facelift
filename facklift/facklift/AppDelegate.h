@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XQRootViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (strong, nonatomic) XQRootViewController *rootViewController;
+@property (strong, nonatomic) UINavigationController *baseNavigationController;
 
 @end
 

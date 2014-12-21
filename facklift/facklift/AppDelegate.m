@@ -7,16 +7,29 @@
 //
 
 #import "AppDelegate.h"
+#import "XQRootViewController.h"
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
+@synthesize rootViewController = rootViewControllrt_;
+@synthesize baseNavigationController = baseNavigationController_;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    rootViewControllrt_ = [[XQRootViewController alloc] initWithNibName:nil bundle:nil];
+    
+    baseNavigationController_ = [[UINavigationController alloc] initWithRootViewController:rootViewControllrt_];
+    
+    
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor colorWithWhite:40/255.0 alpha:1];
+    [self.window setRootViewController:baseNavigationController_];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
