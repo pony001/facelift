@@ -39,8 +39,8 @@
 {
     //TODO 请求网络，返回医院的列表
     PlasticInfo *plasticInfo = [[PlasticInfo alloc] init];
-    plasticInfo.name = @"AABB整形医院";
-    plasticInfo.icon = @"";
+    plasticInfo.name = @"AABB整形医院balabala";
+    plasticInfo.icon = @"http://b.hiphotos.baidu.com/image/pic/item/d6ca7bcb0a46f21f2702c326f5246b600c33ae95.jpg";
     plasticInfo.isCertified = YES;
     plasticInfo.domain = @"鼻子、脸";
     [_plasticList addObject:plasticInfo];
@@ -93,6 +93,7 @@
         //[tableView registerClass:[PlasticCell class] forCellReuseIdentifier:CellIdentifierStats];
          [tableView registerNib:[UINib nibWithNibName:@"PlasticCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:CellIdentifierStats];
     }
+    [cell updateCell];
     [cell initWithPlasticInfo:[_plasticList objectAtIndex:indexPath.row]];
     
     return cell;

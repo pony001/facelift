@@ -9,6 +9,12 @@
 #import "AppDelegate.h"
 #import "XQRootViewController.h"
 
+#if defined(DEBUG)
+int ddLogLevel = LOG_LEVEL_INFO;
+#else
+int ddLogLevel = LOG_LEVEL_ERROR;
+#endif
+
 @interface AppDelegate ()
 
 @end
@@ -19,11 +25,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+        
     rootViewControllrt_ = [[XQRootViewController alloc] initWithNibName:nil bundle:nil];
     
     baseNavigationController_ = [[UINavigationController alloc] initWithRootViewController:rootViewControllrt_];
-    
+    baseNavigationController_.navigationBarHidden = YES;
     
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

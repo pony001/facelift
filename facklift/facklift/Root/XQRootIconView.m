@@ -22,11 +22,11 @@
         button = [UIButton buttonWithType:UIButtonTypeCustom];
         float buttonWidth = 320/5;
         
-        [button setFrame:CGRectMake(0, 0, buttonWidth, 40)];
+        [button setFrame:CGRectMake(0, 0, buttonWidth, 35)];
         [button addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:button];
         
-        title = [[UILabel alloc] initWithFrame:CGRectMake(0, 26, buttonWidth, 20)];
+        title = [[UILabel alloc] initWithFrame:CGRectMake(0, 25, buttonWidth, 20)];
         title.font = [UIFont systemFontOfSize:10];
         title.textColor = GREYColor;
         title.textAlignment = NSTextAlignmentCenter;

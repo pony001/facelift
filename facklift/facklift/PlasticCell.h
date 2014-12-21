@@ -7,16 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RatingView.h"
 
 @class PlasticInfo;
 
-@interface PlasticCell : UITableViewCell
+@interface PlasticCell : UITableViewCell<RatingViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *icon;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *domain;
 @property (weak, nonatomic) IBOutlet UIImageView *certifiedImage;
+@property (weak, nonatomic) IBOutlet RatingView *ratingView;
 
+- (void)updateCell;
 - (void)initWithPlasticInfo:(PlasticInfo*)plasticInfo;
 
 @end

@@ -88,12 +88,8 @@
     }
     
     CGRect rect = _rootTabBar.frame;
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)  {
-        rect.origin.y = [UIScreen mainScreen].bounds.size.height - rect.size.height;
-    }else {
-        rect.origin.y = [UIScreen mainScreen].bounds.size.height - rect.size.height- 20;
-    }
-
+    rect.origin.y = [UIScreen mainScreen].bounds.size.height - rect.size.height;
+   
     [_rootTabBar setFrame:rect];
 }
 
@@ -104,7 +100,7 @@
         _loginInfoViewController = [[LoginInfoViewController alloc] initWithNibName:@"LoginInfoViewController" bundle:nil];
         CGRect rect = self.view.frame;
         rect.origin.y = 0;
-        rect.size.height = rect.size.height - 49;
+        rect.size.height = rect.size.height - 44;
         [_loginInfoViewController.view setFrame:rect];
         
         [self.view insertSubview:_loginInfoViewController.view atIndex:0];
@@ -120,7 +116,7 @@
         _circleViewController = [[CircleViewController alloc] initWithNibName:@"CircleViewController" bundle:nil];
         CGRect rect = self.view.frame;
         rect.origin.y = 0;
-        rect.size.height = rect.size.height - 49;
+        rect.size.height = rect.size.height - 44;
         [_circleViewController.view setFrame:rect];
         
         [self.view insertSubview:_circleViewController.view atIndex:0];
@@ -136,7 +132,7 @@
         _mainViewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
         CGRect rect = self.view.frame;
         rect.origin.y = 0;
-        rect.size.height = rect.size.height - 49;
+        rect.size.height = rect.size.height - 44;
         [_mainViewController.view setFrame:rect];
         
         [self.view insertSubview:_mainViewController.view atIndex:0];
@@ -152,7 +148,7 @@
         _storyViewController = [[StoryViewController alloc] initWithNibName:@"StoryViewController" bundle:nil];
         CGRect rect = self.view.frame;
         rect.origin.y = 0;
-        rect.size.height = rect.size.height - 49;
+        rect.size.height = rect.size.height - 44;
         [_storyViewController.view setFrame:rect];
         
         [self.view insertSubview:_storyViewController.view atIndex:0];
@@ -168,7 +164,7 @@
         _plasticViewController = [[PlasticViewController alloc] initWithNibName:@"PlasticViewController" bundle:nil];
         CGRect rect = self.view.frame;
         rect.origin.y = 0;
-        rect.size.height = rect.size.height - 49;
+        rect.size.height = rect.size.height - 44;
         [_plasticViewController.view setFrame:rect];
         
         [self.view insertSubview:_plasticViewController.view atIndex:0];

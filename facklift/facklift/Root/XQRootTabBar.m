@@ -16,7 +16,7 @@
 #pragma mark -- Life Cycle
 - (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, 320, 49+7)];
+    self = [super initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, 320, 44)];
     if (self) {
         
         _badgeArray = [[NSMutableArray alloc] init];
@@ -25,19 +25,21 @@
         //_titleArray = [NSMutableArray arrayWithObjects:@"主页",@"医院",@"故事",@"圈子",@"登录/信息", nil];
         
         self.backgroundColor = [UIColor clearColor];
+      
+        //注释分割线
+//        _topCutLineImageView = [[UIImageView alloc] init];
+//        [_topCutLineImageView setFrame:CGRectMake(0, 0, 320, 7)];
+//        _topCutLineImageView.image = [UIImage imageNamed:@"tabbarTopCutLine.png"];
+//        [self addSubview:_topCutLineImageView];
         
-        _topCutLineImageView = [[UIImageView alloc] init];
-        [_topCutLineImageView setFrame:CGRectMake(0, 0, 320, 7)];
-        _topCutLineImageView.image = [UIImage imageNamed:@"tabbarTopCutLine.png"];
-        [self addSubview:_topCutLineImageView];
-        
-        _bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 7,320, 49)];
-        _bgView.backgroundColor = UIColorFromRGB(0xf1f1f1);
+        _bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0,320, 44)];
+        _bgView.backgroundColor = BGColor;
         [self addSubview:_bgView];
 
-        _selectBgView = [[UIView alloc] initWithFrame:CGRectMake(18, 46,26, 3)];
-        _selectBgView.backgroundColor = UIColorFromRGB(0xff7e00);
-        [_bgView addSubview:_selectBgView];
+//        注释滑块
+//        _selectBgView = [[UIView alloc] initWithFrame:CGRectMake(18, 46,26, 3)];
+//        _selectBgView.backgroundColor = UIColorFromRGB(0xff7e00);
+//        [_bgView addSubview:_selectBgView];
         
         _nMoveStepLeft = 4;
         
@@ -75,7 +77,7 @@
             [tempIconView setTitle:[titleArray objectAtIndex:(i - 1)]];
             [iconViewArray addObject:tempIconView];
             
-            tempIconView.frame = CGRectMake(buttonWidth * (i - 1), 1, buttonWidth, 46);
+            tempIconView.frame = CGRectMake(buttonWidth * (i - 1), 0, buttonWidth, 44);
             
             [_bgView addSubview:tempIconView];
             
@@ -153,7 +155,8 @@
     
     _nselectTagIndex = nIndex-1;
     
-    [_selectBgView setFrame:CGRectMake(64*_nselectTagIndex+17, 46,30, 3)];
+    //TODO 把底部滑块删除
+    //[_selectBgView setFrame:CGRectMake(64*_nselectTagIndex+17, 46,30, 3)];
     
 }
 
@@ -170,7 +173,7 @@
                               delay:0
                             options:UIViewAnimationCurveEaseInOut
                          animations:^{
-                              [_selectBgView setFrame:CGRectMake(_ntabbarOrginX1, 46,30, 3)];
+                              //[_selectBgView setFrame:CGRectMake(_ntabbarOrginX1, 46,30, 3)];
                          } completion:^(BOOL finished) {
                              [self moveAnimationDidEnded];
                          }];
@@ -181,7 +184,7 @@
                               delay:0
                             options:UIViewAnimationCurveEaseInOut
                          animations:^{
-                             [_selectBgView setFrame:CGRectMake(_ntabbarOrginX2, 46,30, 3)];
+                             //[_selectBgView setFrame:CGRectMake(_ntabbarOrginX2, 46,30, 3)];
                          } completion:^(BOOL finished) {
                              [self moveAnimationDidEnded];
                          }];
@@ -192,7 +195,7 @@
                               delay:0
                             options:UIViewAnimationCurveEaseInOut
                          animations:^{
-                             [_selectBgView setFrame:CGRectMake(_ntabbarOrginX3, 46,30, 3)];
+                             //[_selectBgView setFrame:CGRectMake(_ntabbarOrginX3, 46,30, 3)];
                          } completion:^(BOOL finished) {
                              [self moveAnimationDidEnded];
                          }];
@@ -203,7 +206,7 @@
                               delay:0
                             options:UIViewAnimationCurveEaseInOut
                          animations:^{
-                             [_selectBgView setFrame:CGRectMake(_ntabbarOrginX4, 46,30, 3)];
+                             //[_selectBgView setFrame:CGRectMake(_ntabbarOrginX4, 46,30, 3)];
                          } completion:^(BOOL finished) {
                              [self moveAnimationDidEnded];
                          }];
@@ -214,7 +217,7 @@
                               delay:0
                             options:UIViewAnimationCurveEaseInOut
                          animations:^{
-                             [_selectBgView setFrame:CGRectMake(_ntabbarOrginX5, 46,30, 3)];
+                             //[_selectBgView setFrame:CGRectMake(_ntabbarOrginX5, 46,30, 3)];
                          } completion:^(BOOL finished) {
                              [self moveAnimationDidEnded];
                          }];
